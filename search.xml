@@ -20,7 +20,7 @@
     
     
     <entry>
-      <title>about</title>
+      <title>关于我</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
@@ -31,7 +31,7 @@
     
     
     <entry>
-      <title>tags</title>
+      <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
       
