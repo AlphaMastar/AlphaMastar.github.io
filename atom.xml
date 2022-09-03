@@ -3,11 +3,11 @@
   <title>安艺云</title>
   
   <subtitle>天朗气清 惠风和畅</subtitle>
-  <link href="https://alphamastar.github.io/atom.xml" rel="self"/>
+  <link href="https://www.netreflix.cn/atom.xml" rel="self"/>
   
-  <link href="https://alphamastar.github.io/"/>
+  <link href="https://www.netreflix.cn/"/>
   <updated>2022-09-01T06:44:05.578Z</updated>
-  <id>https://alphamastar.github.io/</id>
+  <id>https://www.netreflix.cn/</id>
   
   <author>
     <name>AlphaMaster</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://alphamastar.github.io/posts/4a17b156.html"/>
-    <id>https://alphamastar.github.io/posts/4a17b156.html</id>
+    <link href="https://www.netreflix.cn/posts/4a17b156.html"/>
+    <id>https://www.netreflix.cn/posts/4a17b156.html</id>
     <published>2022-08-26T12:19:39.057Z</published>
     <updated>2022-09-01T06:44:05.578Z</updated>
     
