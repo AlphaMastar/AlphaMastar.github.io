@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.netreflix.cn/about/index.html</loc>
+    <loc>https://www.netreflix.cn/tags/index.html</loc>
     
-    <lastmod>2022-09-09</lastmod>
+    <lastmod>2022-09-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,16 +13,16 @@
   <url>
     <loc>https://www.netreflix.cn/posts/4a17b156.html</loc>
     
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.netreflix.cn/tags/index.html</loc>
+    <loc>https://www.netreflix.cn/about/index.html</loc>
     
-    <lastmod>2022-08-29</lastmod>
+    <lastmod>2022-09-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
 
   <url>
     <loc>https://www.netreflix.cn/</loc>
-    <lastmod>2022-09-09</lastmod>
+    <lastmod>2022-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
