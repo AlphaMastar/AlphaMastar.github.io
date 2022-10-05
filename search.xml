@@ -35,7 +35,7 @@
       <link href="/csgo/index.html"/>
       <url>/csgo/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<iframe>    <div id="root">    </div></iframe>]]></content>
       
     </entry>
     
