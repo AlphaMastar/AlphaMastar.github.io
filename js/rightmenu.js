@@ -115,6 +115,7 @@ document.onkeydown = function (event) {
 function popupMenu() {
     //window.oncontextmenu=function(){return false;}
     window.oncontextmenu = function (event) {
+        if(event.ctrlKey)return true;
         console.log(event.keyCode)
         $('.rightMenu-group.hide').hide();
         //如果有文字选中，则显示 文字选中相关的菜单项
