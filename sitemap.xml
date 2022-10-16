@@ -4,7 +4,7 @@
   <url>
     <loc>https://www.netreflix.cn/tags/index.html</loc>
     
-    <lastmod>2022-10-15</lastmod>
+    <lastmod>2022-10-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://www.netreflix.cn/posts/4a17b156.html</loc>
     
-    <lastmod>2022-10-15</lastmod>
+    <lastmod>2022-10-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,16 @@
   <url>
     <loc>https://www.netreflix.cn/about/index.html</loc>
     
-    <lastmod>2022-10-15</lastmod>
+    <lastmod>2022-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.netreflix.cn/categories/index.html</loc>
+    
+    <lastmod>2022-10-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +40,7 @@
   <url>
     <loc>https://www.netreflix.cn/csgo/index.html</loc>
     
-    <lastmod>2022-10-15</lastmod>
+    <lastmod>2022-10-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,12 +49,26 @@
 
   <url>
     <loc>https://www.netreflix.cn/</loc>
-    <lastmod>2022-10-15</lastmod>
+    <lastmod>2022-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>https://www.netreflix.cn/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2022-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://www.netreflix.cn/categories/Hexo/</loc>
+    <lastmod>2022-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
