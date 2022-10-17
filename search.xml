@@ -13,14 +13,14 @@
       
       <categories>
           
-          <category> CSGO社区服务器 </category>
+          <category> 服务器搭建指南 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 服务器搭建 </tag>
+            <tag> CSGO社区服务器 </tag>
             
         </tags>
       
@@ -38,7 +38,7 @@
       
       <categories>
           
-          <category> NodeJS </category>
+          <category> 后端 </category>
           
       </categories>
       
@@ -47,7 +47,7 @@
             
             <tag> NodeJS </tag>
             
-            <tag> 后端 </tag>
+            <tag> Express </tag>
             
         </tags>
       
@@ -65,14 +65,14 @@
       
       <categories>
           
-          <category> Hexo </category>
+          <category> 前端 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 前端 </tag>
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -99,7 +99,7 @@
       <link href="/category/index.html"/>
       <url>/category/index.html</url>
       
-        <content type="html"><![CDATA[<div id="article-container"><link rel="stylesheet" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css">    <div id="libCategories">        <div id="lib-cards" class="container"><a href="/categories/前端/" data-pjax-state="">            <div class="card-wrap">                <div class="card" style="transform: rotateY(0deg) rotateX(0deg);">                    <div class="card-bg" style="background-image: url(&quot;https://image.anzhiy.cn/adminuploads/1/2022/09/05/6315e144528fb.webp&quot;); transform: translateX(0px) translateY(0px);"></div>                     <div class="card-info"><h1>前端</h1> <p>前端学习</p></div>                </div>            </div></a><a href="/categories/大学/" data-pjax-state="">            <div class="card-wrap">                <div class="card" style="transform: rotateY(0deg) rotateX(0deg);">                    <div class="card-bg" style="background-image: url(&quot;https://image.anzhiy.cn/adminuploads/1/2022/09/05/6315e1433f197.webp&quot;); transform: translateX(0px) translateY(0px);"></div>                     <div class="card-info"><h1>服务器搭建</h1> <p>关于游戏服务器配置的一些想法</p></div>                </div>            </div></a><a href="/categories/生活/" data-pjax-state="">            <div class="card-wrap">                <div class="card" style="transform: rotateY(0deg) rotateX(0deg);">                    <div class="card-bg" style="background-image: url(&quot;https://image.anzhiy.cn/adminuploads/1/2022/09/05/6315e142a69a9.webp&quot;); transform: translateX(0px) translateY(0px);"></div>                     <div class="card-info"><h1>后端</h1> <p>后端学习</p></div>                </div>            </div></a>        </div>    </div></div>]]></content>
+        <content type="html"><![CDATA[<div id="article-container"><link rel="stylesheet" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css">    <div id="libCategories">        <div id="lib-cards" class="container"><a href="/categories/前端/"        data-pjax-state="">            <div class="card-wrap">                <div class="card" style="transform: rotateY(0deg) rotateX(0deg);">                    <div class="card-bg" style="background-image: url(&quot;https://image.anzhiy.cn/adminuploads/1/2022/09/05/6315e144528fb.webp&quot;); transform: translateX(0px) translateY(0px);"></div>                     <div class="card-info"><h1>前端</h1> <p>前端学习</p></div>                </div>            </div></a><a href="/categories/服务器搭建指南/" data-pjax-state="">            <div class="card-wrap">                <div class="card" style="transform: rotateY(0deg) rotateX(0deg);">                    <div class="card-bg" style="background-image: url(&quot;https://image.anzhiy.cn/adminuploads/1/2022/09/05/6315e1433f197.webp&quot;); transform: translateX(0px) translateY(0px);"></div>                     <div class="card-info"><h1>服务器搭建</h1> <p>关于游戏服务器配置的一些想法</p></div>                </div>            </div></a><a href="/categories/后端/" data-pjax-state="">            <div class="card-wrap">                <div class="card" style="transform: rotateY(0deg) rotateX(0deg);">                    <div class="card-bg" style="background-image: url(&quot;https://image.anzhiy.cn/adminuploads/1/2022/09/05/6315e142a69a9.webp&quot;); transform: translateX(0px) translateY(0px);"></div>                     <div class="card-info"><h1>后端</h1> <p>后端学习</p></div>                </div>            </div></a>        </div>    </div></div>]]></content>
       
     </entry>
     
