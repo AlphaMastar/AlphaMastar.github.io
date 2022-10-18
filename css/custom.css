@@ -532,7 +532,6 @@ li.card-archive-list-item {
   background: linear-gradient(-45deg, var(--anzhiyu-main), #b8cfff, #af83f1, #3d7bff);
   background-size: 400%;
   box-shadow: var(--anzhiyu-shadow-black);
-  animation: gradient 3s ease infinite;
   position: relative;
   color: var(--anzhiyu-white);
 }
