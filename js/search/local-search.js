@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   const openSearch = () => {
     const bodyStyle = document.body.style;
     bodyStyle.width = "100%";
-    bodyStyle.overflow = "hidden";
+    bodyStyle.overflow = "visible";
     anzhiyu.animateIn($searchMask, "to_show 0.5s");
     anzhiyu.animateIn(document.querySelector("#local-search .search-dialog"), "titleScale 0.5s");
     setTimeout(() => {
