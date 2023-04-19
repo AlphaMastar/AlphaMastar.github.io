@@ -56,6 +56,33 @@
     
     
     <entry>
+      <title>CSGO社区</title>
+      <link href="/posts/2c23d359.html"/>
+      <url>/posts/2c23d359.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎来到Netreflix社区服务器"><a href="#欢迎来到Netreflix社区服务器" class="headerlink" title=" 欢迎来到Netreflix社区服务器"></a><center> 欢迎来到Netreflix社区服务器</h1><h2 id="这个是什么？"><a href="#这个是什么？" class="headerlink" title=" 这个是什么？"></a><center> 这个是什么？</h2><h4 id="如你所见，这是我创建的第一台CSGO社区服务器-接下来将解释服务器中所需要学会的配置指令，能够帮助更好地在游戏中获得更好的游戏体验。"><a href="#如你所见，这是我创建的第一台CSGO社区服务器-接下来将解释服务器中所需要学会的配置指令，能够帮助更好地在游戏中获得更好的游戏体验。" class="headerlink" title="如你所见，这是我创建的第一台CSGO社区服务器,接下来将解释服务器中所需要学会的配置指令，能够帮助更好地在游戏中获得更好的游戏体验。"></a><center>如你所见，这是我创建的第一台CSGO社区服务器,接下来将解释服务器中所需要学会的配置指令，能够帮助更好地在游戏中获得更好的游戏体验。</h4><h2 id="Commands"><a href="#Commands" class="headerlink" title=" Commands"></a><center> Commands</h2><div class="note success simple"><p>Tips：只需在CSGO服务器内打开聊天框输入以下命令即可</p></div><div class="table-wrap">    <table>        <thead>            <tr>                <th>指令用法</th>                <th>功能</th>            </tr>        </thead>        <tbody>            <tr>                <td>!menu</td>                <td>这是一个总的功能列表<br>可以从总调出所有功能菜单</td>            </tr>            <tr>                <td>!ws</td>                <td>这是一个换刀和换枪械皮肤的菜单<br>可以从中配置您所需要的各种武器的皮肤，并且永久保存<br>但仅限在本服务器中保存数据</td>            </tr>            <tr>                <td>!sticker</td>                <td>这是一个换皮肤贴纸的菜单<br>必须选择一把武器，然后可以从中选择你喜欢的贴纸</td>            </tr>            <tr>                <td>!music</td>                <td>这是一个换音乐盒的菜单<br>可以从中选择你喜欢的音乐盒</td>            </tr>            <tr>                <td>!glove</td>                <td>这是一个换手套的菜单<br>可以从中选择你喜欢的手套<br>同武器皮肤一致，换边后需要重新配置</td>            </tr>            <tr>                <td>!wiki</td>                <td>这是一个道具练习的菜单<br>可以在热身阶段练习投掷物的扔法<br>但在比赛开始过后，将暂时停止使用</td>            </tr>        </tbody>    </table></div><h2 id="Commands-Operator"><a href="#Commands-Operator" class="headerlink" title=" Commands Operator"></a><center> Commands Operator</h2><div class="note info flat"><p>以上是一些基础的命令，接下来将要解释作为OP管理员所要了解的命令</p></div><div>    <table class="table-warp">        <thead>            <tr>                <th>指令用法</th>                <th>功能</th>            </tr>        </thead>        <tbody>            <tr>                <td>!admin</td>                <td>这是一个管理员菜单<br>可以从总调出管理员命令</td>            </tr>            <tr>                <td>!setup<br>!get5</td>                <td>这是一个开启满十竞技或者其他比赛配置的菜单<br>可以从中配置各项比赛，默认进入服务器是满十配置状态</td>            </tr>            <tr>                <td>!Get5</td>                <td>这也是一个开启满十竞技的菜单<br>由于Get5的专业性，建议使用上述第二个命令开启比赛</td>            </tr>        </tbody>    </table></div><div class="note warning simple"><p>接下来的命令将是区别于聊天框，命令写在控制台才能生效！</p></div><div>    <table class="table-warp">        <thead>            <tr>                <th>指令sm_rcon用法</th>                <th>功能</th>            </tr>        </thead>        <tbody>            <tr>                <td>sm_rcon map + 地图名</td>                <td>可以向服务器后台调出命令，强行服务器换图<br>使用时去掉加号“➕”，注意空格</td>            </tr>            <tr>                <td>sm_rcon bot_kick</td>                <td>可以向服务器后台调出命令，强行服务器踢出机器人</td>            </tr>        </tbody>    </table></div><h3 id="好了，看到这里你已经学会了大部分的服务器指令了，点击下方即可进入"><a href="#好了，看到这里你已经学会了大部分的服务器指令了，点击下方即可进入" class="headerlink" title=" 好了，看到这里你已经学会了大部分的服务器指令了，点击下方即可进入"></a><center> 好了，看到这里你已经学会了大部分的服务器指令了，点击下方即可进入</h3><a class="btn-anzhiyu block center green larger" href="steam://rungame/730/76561202255233023/+connect cloud.netreflix.com:27015"   title="点击进入社区服务器"><i class="far fa-hand-point-right"></i><span>点击进入社区服务器</span></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活日常 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSGO社区服务器 </tag>
+            
+            <tag> CSGO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/posts/4a17b156.html"/>
       <url>/posts/4a17b156.html</url>
