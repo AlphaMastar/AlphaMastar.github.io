@@ -9,3 +9,36 @@
   button:not(:disabled) {
     cursor: url('/img/x2.cur'), auto !important;
   }
+
+  /* 标签页魔改 */
+  /* .is-center {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .tag-cloud-list a {
+    display: flex;
+    width: fit-content;
+    color: var(--anzhiyu-fontcolor) !important;
+    font-size: 1.4em !important;
+    padding: 0.2em .5em;
+    background: var(--heo-card-bg);
+    margin: .5em .5em;
+    border-radius: 12px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    border: var(--style-border-always);
+    box-shadow: var(--heo-shadow-border);
+    align-items: center;
+  }
+  
+  .tag-cloud-list a:hover {
+    background: var(--heo-blue) !important;
+    box-shadow: var(--heo-shadow-blue);
+    color: var(--heo-white) !important;
+    border: var(--style-border-hover);
+  } */
+  
