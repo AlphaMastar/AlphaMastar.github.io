@@ -11,7 +11,7 @@
   }
 
   /* 标签页魔改 */
-  /* .is-center {
+  .is-center-tag {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -19,26 +19,52 @@
     flex-direction: row;
   }
 
-  .tag-cloud-list a {
+  #page .tag-cloud-list a {
     display: flex;
     width: fit-content;
     color: var(--anzhiyu-fontcolor) !important;
     font-size: 1.4em !important;
     padding: 0.2em .5em;
-    background: var(--heo-card-bg);
+    background: var(--anzhiyu-card-bg);
     margin: .5em .5em;
     border-radius: 12px;
     -webkit-backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     border: var(--style-border-always);
-    box-shadow: var(--heo-shadow-border);
+    box-shadow: var(--anzhiyu-shadow-border);
     align-items: center;
   }
   
-  .tag-cloud-list a:hover {
-    background: var(--heo-blue) !important;
-    box-shadow: var(--heo-shadow-blue);
-    color: var(--heo-white) !important;
+  #page .tag-cloud-list a:hover {
+    background: var(--anzhiyu-blue-main) !important;
+    box-shadow: var(--anzhiyu-shadow-blue);
+    color: var(--anzhiyu-white) !important;
     border: var(--style-border-hover);
+  } 
+  /* .tag-cloud-list.is-center-tag {
+    content: "#";
+    font-size: 22px;
+    opacity: 0.4;
+    margin-right: 2px;
   } */
+  .tag-cloud-list.is-center-tag sup {
+      top: 0em !important;
+      background: var(--anzhiyu-secondbg);
+      padding: 4px 4px;
+      border-radius: 8px;
+      color: var(--anzhiyu-secondtext);
+      line-height: 1;
+      text-align: center;
+      min-width: 35px;
+      display: inline-block;
+      font-size: 1rem;
+      margin-left: 4px;
+  }
+  #page .tag-cloud-list a:hover span.tagsPageCount {
+    color: var(--anzhiyu-lighttext);
+  }
   
+  /* 标签页box背景 */
+  div#tag-page {
+    background: rgba(255, 255, 255, 0.9);
+  }
