@@ -1,12 +1,13 @@
+// https://v1.jinrishici.com/all.json
 !function(e) {
     var n, t = {}, o = "jinrishici-token";
     function i() {
-        return document.getElementById("jinrishici-sentence") || 0 != document.getElementsByClassName("jinrishici-sentence").length
+        return document.getElementById("todayCard-title") || 0 != document.getElementsByClassName("todayCard-title").length
     }
     function c() {
         t.load(function(e) {
-            var n = document.getElementById("jinrishici-sentence")
-              , t = document.getElementsByClassName("jinrishici-sentence");
+            var n = document.getElementById("todayCard-title")
+              , t = document.getElementsByClassName("todayCard-title");
             if (n && (n.innerText = e.data.content),
             0 !== t.length)
                 for (var o = 0; o < t.length; o++)
