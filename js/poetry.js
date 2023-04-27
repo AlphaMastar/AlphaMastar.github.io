@@ -1,4 +1,4 @@
-// https://v1.jinrishici.com/all.json
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>// https://v1.jinrishici.com/all.json
 !function(e) {
     var n, t = {}, o = "jinrishici-token";
     function i() {
