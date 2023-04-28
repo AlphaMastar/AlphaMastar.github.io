@@ -128,7 +128,7 @@ window.addEventListener("load", () => {
             <div class="search-result-tags">
         `;
         for (let i = 0; i < tags.length; i++) {
-          templates += `<a class="tag-list" href="/tags/${tags[i]}/">#${tags[i]}</a>`;
+          templates += `<a class="tag-list" href="${tags[i].path}/">#${tags[i].name}</a>`;
         }
         templates += `
           </div>
