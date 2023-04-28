@@ -41,12 +41,7 @@
     color: var(--anzhiyu-white) !important;
     border: var(--style-border-hover);
   } 
-  /* .tag-cloud-list.is-center-tag {
-    content: "#";
-    font-size: 22px;
-    opacity: 0.4;
-    margin-right: 2px;
-  } */
+
   .tag-cloud-list.is-center-tag sup {
       top: 0em !important;
       background: var(--anzhiyu-secondbg);
@@ -60,11 +55,22 @@
       font-size: 1rem;
       margin-left: 4px;
   }
+
   #page .tag-cloud-list a:hover span.tagsPageCount {
     color: var(--anzhiyu-lighttext);
   }
   
-  /* 标签页box背景 */
-  div#tag-page {
-    background: rgba(255, 255, 255, 0.9);
+  /* .tag-cloud-list.is-center-tag {
+    content: "#";
+    font-size: 22px;
+    opacity: 0.4;
+    margin-right: 2px;
+  }  */
+
+  /* 侧边栏标签样式 */
+  #aside-content .card-tag-cloud {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center
   }
