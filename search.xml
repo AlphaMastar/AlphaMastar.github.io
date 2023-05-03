@@ -233,6 +233,17 @@
     
     <entry>
       <title></title>
+      <link href="/js/modify.js"/>
+      <url>/js/modify.js</url>
+      
+        <content type="html"><![CDATA[!function modify() {    let condition = document.getElementsByClassName("is-center-tag").item(0);    if (condition != null){        page.style.background='none';        page.style.boxShadow='none';    }}(window);]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/js/poetry.js"/>
       <url>/js/poetry.js</url>
       
