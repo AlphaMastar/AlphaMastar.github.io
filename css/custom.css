@@ -60,12 +60,12 @@
     color: var(--anzhiyu-lighttext);
   }
   
-  /* .tag-cloud-list.is-center-tag {
+  .tag-cloud-list.is-center-tag a::before{
     content: "#";
     font-size: 22px;
     opacity: 0.4;
     margin-right: 2px;
-  }  */
+  }
 
   /* 侧边栏标签样式 */
   #aside-content .card-tag-cloud {
