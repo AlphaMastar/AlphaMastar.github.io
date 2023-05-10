@@ -17,6 +17,28 @@ window.addEventListener("load", () => {
     });
   };
 
+  // shortcut: shift+S
+  if (anzhiyu_keyboard) {
+    window.addEventListener("keydown", function (event) {
+      if (event.keyCode == 83 && event.shiftKey) {
+        console.info(selectTextNow);
+        if (selectTextNow) {
+          openSearch();
+          const t = document.querySelector("#algolia-search-input > div > form > input");
+          t.value = selectTextNow;
+          t.dispatchEvent(new Event("input"));
+          setTimeout(() => {
+            document.querySelector("#algolia-search-input > div > form > button.ais-SearchBox-submit").click();
+          }, 64);
+        } else {
+          openSearch();
+        }
+
+        return false;
+      }
+    });
+  }
+
   const closeSearch = () => {
     const bodyStyle = document.body.style;
     bodyStyle.width = "";
@@ -128,7 +150,7 @@ window.addEventListener("load", () => {
             <div class="search-result-tags">
         `;
         for (let i = 0; i < tags.length; i++) {
-          templates += `<a class="tag-list" href="${tags[i].path}/">#${tags[i].name}</a>`;
+          templates += `<a class="tag-list" href="/tags/${tags[i]}/">#${tags[i]}</a>`;
         }
         templates += `
           </div>
