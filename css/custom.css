@@ -56,3 +56,7 @@
   .post-tools-right {
     width: 100%;
   }
+
+  table tr:nth-child(even) {
+    background-color: var(--anzhiyu-secondbg)
+  }
