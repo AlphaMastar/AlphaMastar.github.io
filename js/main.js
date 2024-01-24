@@ -1272,7 +1272,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const httpRequest = new XMLHttpRequest();
-    httpRequest.open("GET", `https://api.netreflix.cn/api/imagecolor?url=${path}`, true);
+    httpRequest.open("GET", `https://api.netreflix.cn/imagecolor/${path}`, true);
     httpRequest.send();
 
     httpRequest.onreadystatechange = () => {
