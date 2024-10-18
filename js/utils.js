@@ -58,15 +58,18 @@ const anzhiyu = {
     }
   },
 
-  snackbarShow: (text, showAction = false, duration = 2000) => {
+  snackbarShow: (text, showActionFunction = false, duration = 2000, actionText = false) => {
     const { position, bgLight, bgDark } = GLOBAL_CONFIG.Snackbar;
     const bg = document.documentElement.getAttribute("data-theme") === "light" ? bgLight : bgDark;
     const root = document.querySelector(":root");
     root.style.setProperty("--anzhiyu-snackbar-time", duration + "ms");
+
     Snackbar.show({
       text: text,
       backgroundColor: bg,
-      showAction: showAction,
+      onActionClick: showActionFunction,
+      actionText: actionText,
+      showAction: actionText,
       duration: duration,
       pos: position,
       customClass: "snackbar-css",
@@ -262,7 +265,7 @@ const anzhiyu = {
   },
 
   //更改主题色
-  changeThemeColor: function (color) {
+  changeThemeMetaColor: function (color) {
     // console.info(`%c ${color}`, `font-size:36px;color:${color};`);
     if (themeColorMeta !== null) {
       themeColorMeta.setAttribute("content", color);
@@ -286,10 +289,10 @@ const anzhiyu = {
           .replace('"', "");
       }
       if (themeColorMeta.getAttribute("content") === themeColor) return;
-      this.changeThemeColor(themeColor);
+      this.changeThemeMetaColor(themeColor);
     } else {
       if (themeColorMeta.getAttribute("content") === themeColor) return;
-      this.changeThemeColor(themeColor);
+      this.changeThemeMetaColor(themeColor);
     }
   },
   switchDarkMode: () => {
@@ -402,14 +405,14 @@ const anzhiyu = {
   switchCommentBarrage: function () {
     let commentBarrage = document.querySelector(".comment-barrage");
     if (commentBarrage) {
-      if (window.getComputedStyle(commentBarrage).display === "block") {
+      if (window.getComputedStyle(commentBarrage).display === "flex") {
         commentBarrage.style.display = "none";
         anzhiyu.snackbarShow("✨ 已关闭评论弹幕");
         document.querySelector(".menu-commentBarrage-text").textContent = "显示热评";
         document.querySelector("#consoleCommentBarrage").classList.remove("on");
         localStorage.setItem("commentBarrageSwitch", "false");
       } else {
-        commentBarrage.style.display = "block";
+        commentBarrage.style.display = "flex";
         document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
         document.querySelector("#consoleCommentBarrage").classList.add("on");
         anzhiyu.snackbarShow("✨ 已开启评论弹幕");
@@ -472,7 +475,7 @@ const anzhiyu = {
     }
   },
   // 修改时间显示"最近"
-  diffDate: function (d, more = false) {
+  diffDate: function (d, more = false, simple =false) {
     const dateNow = new Date();
     const datePost = new Date(d);
     const dateDiff = dateNow.getTime() - datePost.getTime();
@@ -499,11 +502,30 @@ const anzhiyu = {
       } else {
         result = GLOBAL_CONFIG.date_suffix.just;
       }
+    } else if (simple) {
+      const monthCount = dateDiff / month;
+      const dayCount = dateDiff / day;
+      const hourCount = dateDiff / hour;
+      const minuteCount = dateDiff / minute;
+      if (monthCount >= 1) {
+        result = datePost.toLocaleDateString().replace(/\//g, "-");
+      } else if (dayCount >= 1 && dayCount <= 3) {
+        result = parseInt(dayCount) + " " + GLOBAL_CONFIG.date_suffix.day;
+      } else if (dayCount > 3) {
+        result = datePost.getMonth()+1 + "/" + datePost.getDate();
+      } else if (hourCount >= 1) {
+        result = parseInt(hourCount) + " " + GLOBAL_CONFIG.date_suffix.hour;
+      } else if (minuteCount >= 1) {
+        result = parseInt(minuteCount) + " " + GLOBAL_CONFIG.date_suffix.min;
+      } else {
+        result = GLOBAL_CONFIG.date_suffix.just;
+      }
     } else {
       result = parseInt(dateDiff / day);
     }
     return result;
   },
+
   // 修改即刻中的时间显示
   changeTimeInEssay: function () {
     document.querySelector("#bber") &&
@@ -564,35 +586,14 @@ const anzhiyu = {
     input.focus();
     input.setSelectionRange(-1, -1);
   },
-  //友链随机传送
-  travelling() {
-    var fetchUrl = GLOBAL_CONFIG.friends_vue_info.apiurl + "randomfriend";
-    fetch(fetchUrl)
-      .then(res => res.json())
-      .then(json => {
-        var name = json.name;
-        var link = json.link;
-        Snackbar.show({
-          text:
-            "点击前往按钮进入随机一个友链，不保证跳转网站的安全性和可用性。本次随机到的是本站友链：「" + name + "」",
-          duration: 8000,
-          pos: "top-center",
-          actionText: "前往",
-          onActionClick: function (element) {
-            element.style.opacity = 0;
-            window.open(link, "_blank");
-          },
-        });
-      });
-  },
   //切换音乐播放状态
   musicToggle: function (changePaly = true) {
     if (!anzhiyu_musicFirst) {
       anzhiyu.musicBindEvent();
       anzhiyu_musicFirst = true;
     }
-    let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span>'; // 此處可以更改為你想要顯示的文字
-    let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暂停音乐</span>'; // 同上，但兩處均不建議更改
+    let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span>';
+    let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暂停音乐</span>';
     if (anzhiyu_musicPlaying) {
       navMusicEl.classList.remove("playing");
       document.getElementById("menu-music-toggle").innerHTML = msgPlay;
@@ -670,7 +671,7 @@ const anzhiyu = {
   },
   // 显示中控台
   showConsole: function () {
-    document.querySelector("#console").classList.add("show");
+    consoleEl.classList.add("show");
     anzhiyu.initConsoleState();
   },
 
@@ -682,6 +683,14 @@ const anzhiyu = {
     } else if (consoleEl.classList.contains("reward-show")) {
       // 如果是打赏控制台，就关闭打赏控制台
       consoleEl.classList.remove("reward-show");
+    }
+    // 获取center-console元素
+    const centerConsole = document.getElementById("center-console");
+
+    // 检查center-console是否被选中
+    if (centerConsole.checked) {
+      // 取消选中状态
+      centerConsole.checked = false;
     }
   },
   // 取消加载动画
@@ -1047,8 +1056,16 @@ const anzhiyu = {
 
   // 跳转开往
   totraveling: function () {
-    anzhiyu.snackbarShow("即将跳转到「开往」项目的成员博客，不保证跳转网站的安全性和可用性", !1, 5000);
-    setTimeout(function () {
+    anzhiyu.snackbarShow(
+      "即将跳转到「开往」项目的成员博客，不保证跳转网站的安全性和可用性",
+      element => {
+        element.style.opacity = 0;
+        travellingsTimer && clearTimeout(travellingsTimer);
+      },
+      5000,
+      "取消"
+    );
+    travellingsTimer = setTimeout(function () {
       window.open("https://www.travellings.cn/go.html");
     }, "5000");
   },
@@ -1143,6 +1160,30 @@ const anzhiyu = {
       window.oncontextmenu = oncontextmenuFunction;
     }
   },
+  switchConsole: () => {
+    // switch console
+    const consoleEl = document.getElementById("console");
+    //初始化隐藏边栏
+    const $htmlDom = document.documentElement.classList;
+    $htmlDom.contains("hide-aside")
+      ? document.querySelector("#consoleHideAside").classList.add("on")
+      : document.querySelector("#consoleHideAside").classList.remove("on");
+    if (consoleEl.classList.contains("show")) {
+      consoleEl.classList.remove("show");
+    } else {
+      consoleEl.classList.add("show");
+    }
+    const consoleKeyboard = document.querySelector("#consoleKeyboard");
+    if (consoleKeyboard) {
+      if (localStorage.getItem("keyboardToggle") === "true") {
+        consoleKeyboard.classList.add("on");
+        anzhiyu_keyboard = true;
+      } else {
+        consoleKeyboard.classList.remove("on");
+        anzhiyu_keyboard = false;
+      }
+    }
+  },
   // 定义 intersectionObserver 函数，并接收两个可选参数
   intersectionObserver: function (enterCallback, leaveCallback) {
     let observer;
@@ -1219,5 +1260,15 @@ const anzhiyu = {
       this.scrollLeft += v;
       e.preventDefault();
     });
+  },
+  // 切换菜单显示热评
+  switchRightClickMenuHotReview: function () {
+    const postComment = document.getElementById("post-comment");
+    const menuCommentBarrageDom = document.getElementById("menu-commentBarrage");
+    if (postComment) {
+      menuCommentBarrageDom.style.display = "flex";
+    } else {
+      menuCommentBarrageDom.style.display = "none";
+    }
   },
 };
