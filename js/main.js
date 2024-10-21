@@ -1239,7 +1239,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //封面纯色
   const coverColor = () => {
     const root = document.querySelector(":root");
-    const path = document.getElementById("post-top-bg")?.src;
+    const path = encodeURIComponent(document.getElementById("post-top-bg")?.src);
 
     if (!path) {
       root.style.setProperty("--anzhiyu-bar-background", "var(--anzhiyu-meta-theme-color)");
@@ -1261,7 +1261,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return
     }
     const httpRequest = new XMLHttpRequest();
-    httpRequest.open("GET", `https://api.netreflix.cn/imgcolor?${path}`, true);
+    httpRequest.open("GET", `https://api.netreflix.cn/imagecolor/${path}`, true);
     httpRequest.send();
 
     httpRequest.onreadystatechange = () => {
