@@ -1,6 +1,7 @@
 !function modify() {
     (function tagPagefix() {
-        if (location.pathname == '/tags/') {
+        let arr = ['/tags/', '/categories/'];
+        if (arr.includes(location.pathname)) {
             page.style.background='none';
             page.style.boxShadow='none';
             page.style.border='none';
