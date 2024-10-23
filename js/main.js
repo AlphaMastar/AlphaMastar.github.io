@@ -1260,39 +1260,42 @@ document.addEventListener("DOMContentLoaded", function () {
       anzhiyu.initThemeColor();
       return
     }
-    const httpRequest = new XMLHttpRequest();
-    httpRequest.open("GET", `https://api.netreflix.cn/imagecolor/${path}`, true);
-    httpRequest.send();
 
-    httpRequest.onreadystatechange = () => {
-      const isRequestCompleted = httpRequest.readyState === 4;
-      const isSuccess = isRequestCompleted && httpRequest.status === 200;
+    if (!GLOBAL_CONFIG_SITE.main_color) {
+      const httpRequest = new XMLHttpRequest();
+      httpRequest.open("GET", `https://api.netreflix.cn/imagecolor/${path}`, true);
+      httpRequest.send();
 
-      let value;
+      httpRequest.onreadystatechange = () => {
+        const isRequestCompleted = httpRequest.readyState === 4;
+        const isSuccess = isRequestCompleted && httpRequest.status === 200;
 
-      if (isSuccess) {
-        try {
-          const obj = JSON.parse(httpRequest.responseText);
-          value = "#" + obj.RGB.slice(2);
+        let value;
 
-          if (getContrastYIQ(value) === "light") {
-            value = LightenDarkenColor(colorHex(value), -40);
+        if (isSuccess) {
+          try {
+            const obj = JSON.parse(httpRequest.responseText);
+            value = "#" + obj.RGB.slice(2);
+
+            if (getContrastYIQ(value) === "light") {
+              value = LightenDarkenColor(colorHex(value), -40);
+            }
+          } catch (err) {
+            value = "var(--anzhiyu-theme)";
           }
-        } catch (err) {
+        } else if (isRequestCompleted) {
           value = "var(--anzhiyu-theme)";
         }
-      } else if (isRequestCompleted) {
-        value = "var(--anzhiyu-theme)";
-      }
 
-      if (value) {
-        root.style.setProperty("--anzhiyu-bar-background", value);
-        anzhiyu.initThemeColor();
-        if (GLOBAL_CONFIG.changeMainColorPost) {
-          document.documentElement.style.setProperty("--anzhiyu-main", value);
+        if (value) {
+          root.style.setProperty("--anzhiyu-bar-background", value);
+          anzhiyu.initThemeColor();
+          if (GLOBAL_CONFIG.changeMainColorPost) {
+            document.documentElement.style.setProperty("--anzhiyu-main", value);
+          }
         }
-      }
-    };
+      };
+    }
   };
 
   //RGB颜色转化为16进制颜色
