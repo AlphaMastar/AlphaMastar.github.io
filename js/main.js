@@ -1462,6 +1462,9 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleCardCategory();
     }
 
+    // 画面scroll回到top位置，解决画面导航条闪颜色bug
+    window.scrollTo(0, 0);
+
     scrollFnToDo();
     GLOBAL_CONFIG_SITE.isHome && scrollDownInIndex();
     addHighlightTool();
