@@ -1239,7 +1239,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //封面纯色
   const coverColor = () => {
     const root = document.querySelector(":root");
-    const path = encodeURIComponent(document.getElementById("post-top-bg")?.src);
+    const postTopBg = document.getElementById("post-top-bg");
+    const path = postTopBg ? encodeURIComponent(postTopBg.src) : "";
+    // const path = encodeURIComponent(document.getElementById("post-top-bg")?.src);
 
     if (!path) {
       root.style.setProperty("--anzhiyu-bar-background", "var(--anzhiyu-meta-theme-color)");
@@ -1261,7 +1263,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return
     }
 
-    if (!GLOBAL_CONFIG_SITE.main_color) {
+    let value = GLOBAL_CONFIG_SITE.postMainColor;
+    if (!value) {
       const httpRequest = new XMLHttpRequest();
       httpRequest.open("GET", `https://api.netreflix.cn/imagecolor/${path}`, true);
       httpRequest.send();
@@ -1269,8 +1272,6 @@ document.addEventListener("DOMContentLoaded", function () {
       httpRequest.onreadystatechange = () => {
         const isRequestCompleted = httpRequest.readyState === 4;
         const isSuccess = isRequestCompleted && httpRequest.status === 200;
-
-        let value;
 
         if (isSuccess) {
           try {
@@ -1283,18 +1284,14 @@ document.addEventListener("DOMContentLoaded", function () {
           } catch (err) {
             value = "var(--anzhiyu-theme)";
           }
-        } else if (isRequestCompleted) {
-          value = "var(--anzhiyu-theme)";
         }
+      }
+    };
 
-        if (value) {
-          root.style.setProperty("--anzhiyu-bar-background", value);
-          anzhiyu.initThemeColor();
-          if (GLOBAL_CONFIG.changeMainColorPost) {
-            document.documentElement.style.setProperty("--anzhiyu-main", value);
-          }
-        }
-      };
+    root.style.setProperty("--anzhiyu-bar-background", value);
+    anzhiyu.initThemeColor();
+    if (GLOBAL_CONFIG.changeMainColorPost) {
+      document.documentElement.style.setProperty("--anzhiyu-main", value);
     }
   };
 

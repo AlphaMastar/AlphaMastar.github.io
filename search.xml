@@ -138,17 +138,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>便携小空调 - 为你的夏日带去清凉!</title>
       <link href="/air-conditioner/index.html"/>
       <url>/air-conditioner/index.html</url>
@@ -350,6 +339,28 @@
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>旅行日志</title>
+      <link href="/travel/index.html"/>
+      <url>/travel/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
