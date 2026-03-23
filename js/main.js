@@ -1266,7 +1266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let value = GLOBAL_CONFIG_SITE.postMainColor;
     if (!value) {
       const httpRequest = new XMLHttpRequest();
-      httpRequest.open("GET", `https://api.netreflix.cn/imagecolor/${path}`, true);
+      httpRequest.open("GET", `https://api.netreflix.com/imagecolor/${path}`, true);
       httpRequest.send();
 
       httpRequest.onreadystatechange = () => {
