@@ -637,13 +637,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return top <= viewPortHeight;
       }
 
-      if (isInViewPortOfOneNoDis(pageBottomDomFlag) || percentage > 90) {
-        $navTotop.classList.add("long");
-        $percentBtn.textContent = "返回顶部";
-      } else {
-        $navTotop.classList.remove("long");
-        $percentBtn.textContent = percentage;
-      }
+      // 修复因'返回顶部'按钮过长导致的width过长占用空间问题
+      $percentBtn.textContent = percentage
+      // if (isInViewPortOfOneNoDis(pageBottomDomFlag) || percentage > 90) {
+      //   $navTotop.classList.add("long");
+      //   $percentBtn.textContent = "返回顶部";
+      // } else {
+      //   $navTotop.classList.remove("long");
+      //   $percentBtn.textContent = percentage;
+      // }
 
       // 如果当前页面需要瀑布流，就处理瀑布流
       if (waterfallDom) {
